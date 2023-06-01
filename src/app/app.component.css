@@ -1,0 +1,39 @@
+*{
+  font-size: 30px;
+}
+.main{
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: space-evenly;
+  flex-wrap: nowrap;
+  align-items: center;
+  background: black;
+  color: #FFF;
+}
+
+.inputBlock{
+  display: flex;
+  align-content: space-between;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px;
+  border: 2px solid gold;
+  border-radius: 5px;
+  padding: 10px;
+  height: 100%;
+
+
+}
+.inputBlock select, input {
+  border: none;
+  margin-left: 10px;
+  border-radius: 5px;
+  background: black;
+  color: #FFF;
+  width: 300px;
+
+}
+
+
+

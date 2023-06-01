@@ -1,0 +1,26 @@
+<!-- Toolbar -->
+
+<div class="main">
+  <h2>Currency Converter</h2>
+  <p>{{ baseCurrency }} {{ baseValue }} = {{ targetCurrency }} {{ targetValue }}</p>
+
+  <div>
+    <div class="inputBlock">
+      <label for="baseCurrency">Currency From :</label>
+      <select id="baseCurrency" [(ngModel)]="baseCurrency">
+        <option *ngFor="let currency of currencies" [value]="currency">{{ currency }}</option>
+      </select>
+      <label for="baseValue">From:</label>
+      <input id="baseValue" type="number" [(ngModel)]="baseValue" (input)="convert()" onchange="search()"/>
+    </div>
+    <div class="inputBlock">
+      <label for="targetCurrency">Currency To :</label>
+      <select id="targetCurrency" [(ngModel)]="targetCurrency">
+        <option *ngFor="let currency of currencies" [value]="currency">{{ currency }}</option>
+      </select>
+      <label for="targetValue"> To :</label>
+      <input id="targetValue" type="number" [(ngModel)]="amount"  (input)="reverseConvert()" onchange="search()"/>
+    </div>
+  </div>
+</div>
+<router-outlet></router-outlet>
